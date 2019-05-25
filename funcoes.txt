@@ -1,46 +1,16 @@
-%*****************************
-%  Radix sort
-%
-% This theory contains a formalization of Radixsort for lists of
-% naturals.  It sorts naturals by the digits of their decimal
-% representation using as a stable sorting method merge sort. 
-% Authors: Thiago Mendonca Ferreira Ramos and Mauricio Ayala-Rincon
-%          Grupo de Teoria da Comptuacao
-%          Universidade de Brasilia
-% Last modified: 19 March 2019
-%*****************************
+Provas do radix_sort.pvs
 
-radix_sort: THEORY
+- d_nth(n,d) -> Retorna o dth digito de n.
 
-BEGIN
+-n_digits(n) -> retorna o numero de digitos de um natural
 
-IMPORTING sorting, mod_lems
-
-% d_nth computes the dth digit in the decimal representation of n
-  d_nth(n, d : nat) : RECURSIVE below[10] =
-    IF d = 0 THEN  rem(10)(n)
-    ELSE d_nth( ndiv(n,10), d - 1)
-    ENDIF
-    MEASURE d
-
-% n_digits computes the number of digits in the decimal representation
-% of n
- n_digits(n:nat) : RECURSIVE posnat =
-   IF n < 10 THEN 1
-   ELSE 1 + n_digits(ndiv(n, 10))
-   ENDIF
-   MEASURE n
-
-% A simple algebraic property of n_digits.
-  d_digits_gt : LEMMA
-   FORALL(n : nat): 10^(n_digits(n)) > n
+- d_digits_gt(n) -> prova que 10^(numero de digitos de n) é maior que n 
 
 % Three simple properties of remainder and exponential
 
- rem_div_div :  LEMMA
-   FORALL(n : nat, a, b : posnat) :  ndiv(n, a * b) = ndiv(ndiv(n,a),b) 
+-rem_div_div(n,a,b) -> prova que n/(a*b) = (n/a)/b
 
- rem_b_j_rem_div_times_b  : LEMMA
+-rem_b_j_rem_div_times_b(n,d,b) -> 
    FORALL(n, d : nat, b: posnat) :
       rem(b ^ d)((n - rem(b)(n))/b)  * b = rem(b ^ (d + 1))(n - rem(b)(n))
 
@@ -70,10 +40,10 @@ IMPORTING sorting, mod_lems
 % Merges lists of naturals non decreasingly by the dth digit in their
 % decimal representation
 merge(l1, l2 : list[nat], d : nat) : RECURSIVE list[nat] =
-	  IF null?(l1) OR null?(l2) THEN append(l1, l2)
-	  ELSIF d_nth(car(l1),d) <= d_nth(car(l2),d) THEN cons(car(l1), merge(cdr(l1),l2, d))
-	  ELSE cons(car(l2), merge(l1, cdr(l2), d))
-     ENDIF
+IF null?(l1) OR null?(l2) THEN append(l1, l2)
+ELSIF d_nth(car(l1),d) <= d_nth(car(l2),d) THEN cons(car(l1), merge(cdr(l1),l2, d))
+ELSE cons(car(l2), merge(l1, cdr(l2), d))
+ENDIF
 MEASURE length(l1) + length(l2)
 
 % Merge sort algorithm by the dth digit
@@ -205,5 +175,4 @@ radixsort_works  : THEOREM
   FORALL(l : list[nat]):
     permutations(l,radixsort(l)) AND is_sorted?(radixsort(l))
     
-
 END radix_sort
