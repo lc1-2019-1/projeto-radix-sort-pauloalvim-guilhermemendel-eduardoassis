@@ -168,7 +168,7 @@ MEASURE length(l)
 %*** Apply strong induction in "k-d" using
 %*** command '(measure-induct+ "k-d" ("k" "d"))'
 %*** You will need also apply lemmas on properties of 
-%*** merge_sort and transitivity of permutations.
+%*** mergen_sort and transitivity of permutations.
 %**************************************************************
 % radixsort from the dth until the kth digit permutes (preserves) data.
  radixsort_permutes : CONJECTURE
