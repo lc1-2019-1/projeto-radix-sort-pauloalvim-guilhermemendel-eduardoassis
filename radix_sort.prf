@@ -309,7 +309,6 @@
      integers nil)
     (real_le_is_total_order name-judgement "(total_order?[real])"
      real_props nil)
-    (TRUE const-decl "bool" booleans nil)
     (nonzero_real nonempty-type-eq-decl nil reals nil)
     (both_sides_times2 formula-decl nil real_props nil)
     (int_plus_int_is_int application-judgement "int" integers nil)
@@ -1347,6 +1346,8 @@
      nil)
     (number nonempty-type-decl nil numbers nil)
     (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
     (minus_odd_is_odd application-judgement "odd_int" integers nil)
     (int_plus_int_is_int application-judgement "int" integers nil)
     (real_lt_is_strict_total_order name-judgement
@@ -1367,8 +1368,8 @@
     (nnrat_times_nnrat_is_nnrat application-judgement "nonneg_rat"
      rationals nil)
     (expt def-decl "real" exponentiation nil)
-    (posnat_expt application-judgement "posnat" exponentiation nil)
-    (nonzero_real nonempty-type-eq-decl nil reals nil)
+    (posnat_expt application-judgement "posnat" exponentiation nil) nil
+    nil (nonzero_real nonempty-type-eq-decl nil reals nil)
     (both_sides_div1 formula-decl nil real_props nil)
     (commutative_mult formula-decl nil number_fields nil)
     (rem_b_j_rem_div_times_b formula-decl nil radix_sort nil)
@@ -1391,9 +1392,6 @@
     (nil application-judgement "upto(n)" modulo_arithmetic nil)
     (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
     (int_minus_int_is_int application-judgement "int" integers nil)
-    (boolean nonempty-type-decl nil booleans nil)
-    (bool nonempty-type-eq-decl nil booleans nil)
-    (TRUE const-decl "bool" booleans nil)
     (posint_exp application-judgement "posint" exponentiation nil)
     (mult_divides1 application-judgement "(divides(n))" divides nil)
     (mult_divides2 application-judgement "(divides(m))" divides nil))
@@ -1734,7 +1732,6 @@
      nil)
     (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
      integers nil)
-    (TRUE const-decl "bool" booleans nil)
     (minus_odd_is_odd application-judgement "odd_int" integers nil)
     (rem_b_j_rem_b formula-decl nil radix_sort nil)
     (rem_b_j_rem_div_times_b formula-decl nil radix_sort nil)
@@ -1794,7 +1791,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -1818,7 +1815,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -1848,7 +1845,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -1885,7 +1882,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
     (list type-decl nil list_adt nil)
     (PRED type-eq-decl nil defined_types nil)
     (number nonempty-type-decl nil numbers nil)
@@ -1904,7 +1901,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -1925,7 +1922,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -1946,7 +1943,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -1980,7 +1977,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -2014,7 +2011,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -2054,7 +2051,7 @@
     (list type-decl nil list_adt nil)
     (boolean nonempty-type-decl nil booleans nil)
     (bool nonempty-type-eq-decl nil booleans nil)
-    (PRED type-eq-decl nil defined_types nil)
+    (PRED type-eq-decl nil defined_types nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -2104,7 +2101,7 @@
     (list type-decl nil list_adt nil)
     (boolean nonempty-type-decl nil booleans nil)
     (bool nonempty-type-eq-decl nil booleans nil)
-    (PRED type-eq-decl nil defined_types nil)
+    (PRED type-eq-decl nil defined_types nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -2174,7 +2171,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -2199,7 +2196,7 @@
     (NOT const-decl "[bool -> bool]" booleans nil)
     (number nonempty-type-decl nil numbers nil)
     (PRED type-eq-decl nil defined_types nil)
-    (list type-decl nil list_adt nil)
+    (list type-decl nil list_adt nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
@@ -2279,7 +2276,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
     (PRED type-eq-decl nil defined_types nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (boolean nonempty-type-decl nil booleans nil)
@@ -2373,7 +2370,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
     (PRED type-eq-decl nil defined_types nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (boolean nonempty-type-decl nil booleans nil)
@@ -2516,7 +2513,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
     (PRED type-eq-decl nil defined_types nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (boolean nonempty-type-decl nil booleans nil)
@@ -2656,7 +2653,6 @@
     (occurrences_of_app formula-decl nil sorting nil)
     (occurrences def-decl "nat" sorting nil)
     (app_prefix_suffix formula-decl nil sorting nil)
-    (TRUE const-decl "bool" booleans nil)
     (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
     (permutations const-decl "bool" sorting nil)
     (merge_sort def-decl "list[nat]" radix_sort nil)
@@ -2675,7 +2671,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
     (PRED type-eq-decl nil defined_types nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (boolean nonempty-type-decl nil booleans nil)
@@ -3450,6 +3446,7 @@
      rationals nil)
     (posint_times_posint_is_posint application-judgement "posint"
      integers nil)
+    nil nil nil nil nil nil
     (cdr adt-accessor-decl "[(cons?) -> list]" list_adt nil)
     (cons? adt-recognizer-decl "[list -> boolean]" list_adt nil)
     (merge_permutes formula-decl nil radix_sort nil)
@@ -3457,7 +3454,6 @@
     (permutations_is_commutative formula-decl nil sorting nil)
     (nth_of_append formula-decl nil sorting nil)
     (minus_odd_is_odd application-judgement "odd_int" integers nil)
-    (TRUE const-decl "bool" booleans nil)
     (d_exp_dec formula-decl nil radix_sort nil)
     (both_sides_times_pos_le1 formula-decl nil real_props nil)
     (real_gt_is_strict_total_order name-judgement
@@ -3471,7 +3467,7 @@
     (real_lt_is_strict_total_order name-judgement
      "(strict_total_order?[real])" real_props nil)
     (NOT const-decl "[bool -> bool]" booleans nil)
-    (nth_append formula-decl nil sorting nil)
+    (nth_append formula-decl nil sorting nil) nil nil nil nil nil nil
     (car adt-accessor-decl "[(cons?) -> T]" list_adt nil)
     (cons adt-constructor-decl "[[T, list] -> (cons?)]" list_adt nil)
     (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
@@ -3480,6 +3476,7 @@
      real_props nil)
     (real_le_is_total_order name-judgement "(total_order?[real])"
      real_props nil)
+    nil nil nil
     (null? adt-recognizer-decl "[list -> boolean]" list_adt nil)
     (null adt-constructor-decl "(null?)" list_adt nil)
     (append_null formula-decl nil list_props nil)
@@ -3527,7 +3524,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
     (PRED type-eq-decl nil defined_types nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (boolean nonempty-type-decl nil booleans nil)
@@ -3853,17 +3850,17 @@
         nil))
       nil))
     nil)
-   ((TRUE const-decl "bool" booleans nil)
+   (nil nil nil nil
     (merge_preserves_sort formula-decl nil radix_sort nil)
     (permutations_preserve_contents formula-decl nil sorting nil)
     (contents_prefix formula-decl nil sorting nil)
-    (int_minus_int_is_int application-judgement "int" integers nil)
+    (int_minus_int_is_int application-judgement "int" integers nil) nil
     (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
     (NOT const-decl "[bool -> bool]" booleans nil)
     (length_prefix formula-decl nil sorting nil)
     (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
      integers nil)
-    (length_suffix formula-decl nil sorting nil)
+    (length_suffix formula-decl nil sorting nil) nil nil
     (real_lt_is_strict_total_order name-judgement
      "(strict_total_order?[real])" real_props nil)
     (contents_suffix formula-decl nil sorting nil)
@@ -3916,7 +3913,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
     (PRED type-eq-decl nil defined_types nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (boolean nonempty-type-decl nil booleans nil)
@@ -3953,45 +3950,45 @@
         nil))
       nil))
     nil)
-   ((pred type-eq-decl nil defined_types nil)
-    (well_founded? const-decl "bool" orders nil)
-    (int_minus_int_is_int application-judgement "int" integers nil)
-    (measure_induction formula-decl nil measure_induction nil)
-    (nat nonempty-type-eq-decl nil naturalnumbers nil)
-    (number nonempty-type-decl nil numbers nil)
-    (boolean nonempty-type-decl nil booleans nil)
-    (number_field_pred const-decl "[number -> boolean]" number_fields
-     nil)
-    (number_field nonempty-type-from-decl nil number_fields nil)
-    (real_pred const-decl "[number_field -> boolean]" reals nil)
-    (real nonempty-type-from-decl nil reals nil)
-    (rational_pred const-decl "[real -> boolean]" rationals nil)
-    (rational nonempty-type-from-decl nil rationals nil)
-    (integer_pred const-decl "[rational -> boolean]" integers nil)
-    (int nonempty-type-eq-decl nil integers nil)
-    (bool nonempty-type-eq-decl nil booleans nil)
-    (>= const-decl "bool" reals nil) (<= const-decl "bool" reals nil)
-    (naturalnumber type-eq-decl nil naturalnumbers nil)
-    (numfield nonempty-type-eq-decl nil number_fields nil)
-    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
-    (< const-decl "bool" reals nil)
-    (wf_nat formula-decl nil naturalnumbers nil)
-    (nnint_plus_posint_is_posint application-judgement "posint"
-     integers nil)
-    (list type-decl nil list_adt nil)
-    (PRED type-eq-decl nil defined_types nil) nil
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
-    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
-    (is_sorted_ud? const-decl "bool" radix_sort nil)
-    (radixsort def-decl "list[nat]" radix_sort nil)
-    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
-    (= const-decl "[T, T -> boolean]" equalities nil)
-    (posint_plus_nnint_is_posint application-judgement "posint"
-     integers nil)
-    (merge_sort_d_sorts formula-decl nil radix_sort nil)
+   ((merge_sort def-decl "list[nat]" radix_sort nil)
     (real_lt_is_strict_total_order name-judgement
      "(strict_total_order?[real])" real_props nil)
-    (merge_sort def-decl "list[nat]" radix_sort nil))
+    (merge_sort_d_sorts formula-decl nil radix_sort nil)
+    (posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (radixsort def-decl "list[nat]" radix_sort nil)
+    (is_sorted_ud? const-decl "bool" radix_sort nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (<= const-decl "bool" reals nil) (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
    shostak)
   (radix_sort_d_sort-1 nil 3747848399
    ("" (measure-induct+ "k-d" ("k" "d"))
@@ -4091,45 +4088,44 @@
         nil))
       nil))
     nil)
-   ((pred type-eq-decl nil defined_types nil)
-    (well_founded? const-decl "bool" orders nil)
-    (int_minus_int_is_int application-judgement "int" integers nil)
-    (measure_induction formula-decl nil measure_induction nil)
-    (nat nonempty-type-eq-decl nil naturalnumbers nil)
-    (number nonempty-type-decl nil numbers nil)
-    (boolean nonempty-type-decl nil booleans nil)
-    (number_field_pred const-decl "[number -> boolean]" number_fields
-     nil)
-    (number_field nonempty-type-from-decl nil number_fields nil)
-    (real_pred const-decl "[number_field -> boolean]" reals nil)
-    (real nonempty-type-from-decl nil reals nil)
-    (rational_pred const-decl "[real -> boolean]" rationals nil)
-    (rational nonempty-type-from-decl nil rationals nil)
-    (integer_pred const-decl "[rational -> boolean]" integers nil)
-    (int nonempty-type-eq-decl nil integers nil)
-    (bool nonempty-type-eq-decl nil booleans nil)
-    (>= const-decl "bool" reals nil) (<= const-decl "bool" reals nil)
-    (naturalnumber type-eq-decl nil naturalnumbers nil)
-    (numfield nonempty-type-eq-decl nil number_fields nil)
-    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
-    (< const-decl "bool" reals nil)
-    (wf_nat formula-decl nil naturalnumbers nil)
-    (list type-decl nil list_adt nil)
-    (PRED type-eq-decl nil defined_types nil)
-    (every adt-def-decl "boolean" list_adt nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
-    (permutations const-decl "bool" sorting nil)
-    (radixsort def-decl "list[nat]" radix_sort nil)
-    (= const-decl "[T, T -> boolean]" equalities nil)
-    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
-    (merge_sort_permutes formula-decl nil radix_sort nil)
-    (merge_sort def-decl "list[nat]" radix_sort nil)
-    (permutations_is_transitive formula-decl nil sorting nil)
+   ((posint_plus_nnint_is_posint application-judgement "posint"
+     integers nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
     (real_lt_is_strict_total_order name-judgement
      "(strict_total_order?[real])" real_props nil)
-    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
-    (posint_plus_nnint_is_posint application-judgement "posint"
-     integers nil))
+    (permutations_is_transitive formula-decl nil sorting nil)
+    (merge_sort def-decl "list[nat]" radix_sort nil)
+    (merge_sort_permutes formula-decl nil radix_sort nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (radixsort def-decl "list[nat]" radix_sort nil)
+    (permutations const-decl "bool" sorting nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
+    (PRED type-eq-decl nil defined_types nil)
+    (list type-decl nil list_adt nil)
+    (wf_nat formula-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (<= const-decl "bool" reals nil) (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (well_founded? const-decl "bool" orders nil)
+    (pred type-eq-decl nil defined_types nil))
    nil))
  (rem_max_digits 0
   (rem_max_digits-1 nil 3748007636
@@ -4256,7 +4252,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
     (PRED type-eq-decl nil defined_types nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (boolean nonempty-type-decl nil booleans nil)
@@ -4269,7 +4265,7 @@
     (int_minus_int_is_int application-judgement "int" integers nil)
     (numfield nonempty-type-eq-decl nil number_fields nil)
     (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
-    (posreal nonempty-type-eq-decl nil real_types nil)
+    nil nil (posreal nonempty-type-eq-decl nil real_types nil)
     (nonneg_real nonempty-type-eq-decl nil real_types nil)
     (^ const-decl "real" exponentiation nil)
     (real_lt_is_strict_total_order name-judgement
@@ -4297,6 +4293,7 @@
      integers nil)
     (posint_plus_nnint_is_posint application-judgement "posint"
      integers nil)
+    nil nil nil
     (max const-decl "{p: real | p >= m AND p >= n}" real_defs nil)
     (posint_exp application-judgement "posint" exponentiation nil)
     (mult_divides1 application-judgement "(divides(n))" divides nil)
@@ -4335,7 +4332,7 @@
     (number_field nonempty-type-from-decl nil number_fields nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
-    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil) nil
     (PRED type-eq-decl nil defined_types nil)
     (bool nonempty-type-eq-decl nil booleans nil)
     (boolean nonempty-type-decl nil booleans nil)
@@ -4363,7 +4360,13 @@
               nil))
             nil))
           nil)
-         ("2" (expand "radixsort") (("2" (postpone) nil nil)) nil))
+         ("2" (expand "radixsort")
+          (("2" (prop)
+            (("1" (typepred "max_digits(l)") (("1" (assert) nil nil))
+              nil)
+             ("2" (postpone) nil nil))
+            nil))
+          nil))
         nil))
       nil))
     nil)
@@ -4453,7 +4456,7 @@
     (list type-decl nil list_adt nil)
     (boolean nonempty-type-decl nil booleans nil)
     (bool nonempty-type-eq-decl nil booleans nil)
-    (PRED type-eq-decl nil defined_types nil)
+    (PRED type-eq-decl nil defined_types nil) nil
     (AND const-decl "[bool, bool -> bool]" booleans nil)
     (number_field_pred const-decl "[number -> boolean]" number_fields
      nil)
